@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.lbSignalRLogs = new System.Windows.Forms.ListBox();
-            this.tbClientSignalRHubUrl = new System.Windows.Forms.TextBox();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.lblClientSignalRHubUrlPleaceholder = new System.Windows.Forms.Label();
+            this.lblConnected = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbSignalRLogs
@@ -46,16 +45,6 @@
             this.lbSignalRLogs.Size = new System.Drawing.Size(776, 388);
             this.lbSignalRLogs.TabIndex = 9;
             // 
-            // tbClientSignalRHubUrl
-            // 
-            this.tbClientSignalRHubUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbClientSignalRHubUrl.Location = new System.Drawing.Point(12, 415);
-            this.tbClientSignalRHubUrl.Name = "tbClientSignalRHubUrl";
-            this.tbClientSignalRHubUrl.Size = new System.Drawing.Size(611, 22);
-            this.tbClientSignalRHubUrl.TabIndex = 8;
-            this.tbClientSignalRHubUrl.TextChanged += new System.EventHandler(this.tbClientSignalRHubUrl_TextChanged);
-            // 
             // btnConnect
             // 
             this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -67,26 +56,24 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // lblClientSignalRHubUrlPleaceholder
+            // lblConnected
             // 
-            this.lblClientSignalRHubUrlPleaceholder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblClientSignalRHubUrlPleaceholder.AutoSize = true;
-            this.lblClientSignalRHubUrlPleaceholder.BackColor = System.Drawing.Color.White;
-            this.lblClientSignalRHubUrlPleaceholder.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblClientSignalRHubUrlPleaceholder.Location = new System.Drawing.Point(417, 418);
-            this.lblClientSignalRHubUrlPleaceholder.Name = "lblClientSignalRHubUrlPleaceholder";
-            this.lblClientSignalRHubUrlPleaceholder.Size = new System.Drawing.Size(185, 16);
-            this.lblClientSignalRHubUrlPleaceholder.TabIndex = 10;
-            this.lblClientSignalRHubUrlPleaceholder.Text = "insert url to server signalR hub";
+            this.lblConnected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblConnected.AutoSize = true;
+            this.lblConnected.Location = new System.Drawing.Point(675, 418);
+            this.lblConnected.Name = "lblConnected";
+            this.lblConnected.Size = new System.Drawing.Size(72, 16);
+            this.lblConnected.TabIndex = 10;
+            this.lblConnected.Text = "Connected";
+            this.lblConnected.Visible = false;
             // 
             // SignalRClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblClientSignalRHubUrlPleaceholder);
+            this.Controls.Add(this.lblConnected);
             this.Controls.Add(this.lbSignalRLogs);
-            this.Controls.Add(this.tbClientSignalRHubUrl);
             this.Controls.Add(this.btnConnect);
             this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "SignalRClient";
@@ -99,8 +86,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox lbSignalRLogs;
-        private System.Windows.Forms.TextBox tbClientSignalRHubUrl;
         private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.Label lblClientSignalRHubUrlPleaceholder;
+        private System.Windows.Forms.Label lblConnected;
     }
 }
